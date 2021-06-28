@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <!-- MaterializeCSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css"
+      integrity="sha512-t38vG/f94E72wz6pCsuuhcOPJlHKwPy+PY+n1+tJFzdte3hsIgYE7iEpgg/StngunGszVMrRfvwZinrza0vMTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"
+      integrity="sha512-m2PhLxj2N91eYrIGU2cmIu2d0SkaE4A14bCjVb9zykvp6WtsdriFCiXQ/8Hdj0kssUB/Nz0dMBcoLsJkSCto0Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="card-panel center-align light-blue darken-4 white-text">GitHub Profile Looker</h1>
+
+      <div class="divider"></div>
+
+      <form id="search-form" class="" action="">
+        <h5>Enter a username to see their info & repos</h5>
+        <!-- <a class="waves-effect waves-light btn red">User not found</a> -->
+        <div id="search-bar" class="input-field">
+          <label for="searchBar"></label>
+          <input type="text" name="searchBar" id="searchBar" placeholder="username ..." />
+        </div>
+      </form>
+    </div>
+
+    <!-- Our Materialize grid -->
+    <div class="row">
+      <div class="col s4">
+        <img id="user-pic" class="card small responsive-img" alt="user avatar" />
+        <div id="user-name"></div>
+        <div id="user-bio"></div>
+      </div>
+
+      <div class="col s8">
+        <div id="repos-list" class="collection">
+          <!-- <a href="#!" class="collection-item">
+            repo
+            <span class="new badge" data-badge-caption="watchers">1</span>
+          </a> -->
+        </div>
+      </div>
+    </div>
+    <footer class="page-footer light-blue"></footer>
+
+    <!-- Imports -->
+    <script src="github.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
